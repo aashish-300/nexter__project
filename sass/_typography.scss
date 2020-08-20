@@ -1,0 +1,64 @@
+%heading{
+    font-weight: 400;
+    font-family: $font-display;
+}
+
+.heading-1{
+    @extend %heading;
+}
+
+.heading-2{
+    @extend %heading;
+    font-size:4rem;
+    line-height: 1;
+    font-style:italic;
+
+    &--light{}
+    &--dark{color: $color-grey-dark-1;}
+}
+
+.heading-3{
+   @extend %heading;
+    text-transform: uppercase;
+    font-size:2rem;
+
+    &--light{color:$color-primary;}
+    &--dark{}
+
+}
+
+.heading-4{
+    @extend %heading;
+    font-size:1.9rem;
+
+    &--light{
+        color: $color-grey-light-1;
+    }
+
+    &--dark{
+        color: $color-grey-dark-1;
+    }
+}
+
+.heading-5{
+    @extend %heading;
+    font-size:1.8rem;
+    padding: 1.8rem 2rem;
+    background-color: $color-secondary;
+    color: $color-grey-light-1;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    align-self: end;
+    transform: translateY(50%);
+
+}
+
+.paragraph{
+    font-size: 1.5rem;
+    font-style:italic;
+}
+

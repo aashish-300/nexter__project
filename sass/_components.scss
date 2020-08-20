@@ -1,0 +1,12 @@
+.btn{
+    border:none;
+    font-size: 2rem;
+    color: $color-grey-light-1;
+    background-color: $color-primary;
+    padding:1.8rem 2rem;
+    transition: all 0.2s;
+
+    &:hover{
+        background-color: $color-primary-dark;
+    }
+}
