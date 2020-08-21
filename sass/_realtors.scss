@@ -1,4 +1,55 @@
 .realtors{
     background-color: $color-secondary;
     grid-column: col-start 7/ full-end;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-gap: 1rem;
+
+    &__heading{
+        @media only screen and (max-width: $bp-800){
+            grid-column: 1/-1;
+            justify-self: center;
+
+        }
+    }
+
+    @media only screen and (max-width: $bp-800){
+        grid-column: 1/-1;
+        grid-template-rows: max-content 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        padding: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-600){
+        grid-template-rows: repeat(4,min-content);
+        grid-template-columns: max-content;
+    }
+}
+
+.realtor{
+    display: grid;
+    grid-template-columns: max-content max-content;
+    grid-template-rows: 4rem 4rem ;
+    grid-column-gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+
+    &__img{
+        width: 6.5rem;
+        border-radius: 50%;
+        grid-row: 1/-1;
+    }
+
+    &__name{
+        align-self: end;
+    }
+
+    &__paragraph{
+        grid-area: 2/ 2/3/3;
+        align-self: start;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+    }
 }

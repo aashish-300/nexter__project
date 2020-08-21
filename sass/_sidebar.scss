@@ -2,4 +2,52 @@
     background-color: $color-primary;
     grid-row: 1/-1;
     grid-column: sidebar-start/sidebar-end;
+    
+    display: flex;
+    justify-content: center;
+
+    @media only screen and (max-width: $bp-900){
+        grid-row: 1/2;
+        grid-column: 1/-1;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+
+.lines{
+
+    background-color: #fff;
+    height: 2.4px;
+    margin-top: 5rem;
+    width: 5rem;
+
+
+    &::after,
+    &::before{
+        content: '';
+        display: block;
+        background-color: #fff;
+        height: 2.5px;
+    }
+
+    &::after{
+        transform: translateY(1.3rem);
+    }
+
+    &::before{
+        transform: translateY(-1.4rem);
+    }
+
+    @media only screen and (max-width: $bp-900){
+        margin-top: 0;
+        margin-right: 3rem;
+
+        &::after{
+            transform: translateY(0.9rem);
+        }
+    
+        &::before{
+            transform: translateY(-1.1rem);
+        }
+    }
 }
